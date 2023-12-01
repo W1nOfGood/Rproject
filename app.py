@@ -844,7 +844,7 @@ def download_from_url(url, model):
     zipfile_path = './zips/' + zipfile
     try:
         if "drive.google.com" in url:
-            subprocess.run(["gdown", url, "--fuzzy", "-O", zipfile_path])
+            subprocess.run(["gdown", url, "-O", zipfile_path])
         elif "mega.nz" in url:
             m = Mega()
             m.download_url(url, './zips')
